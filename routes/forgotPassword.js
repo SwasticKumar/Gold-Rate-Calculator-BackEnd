@@ -28,13 +28,13 @@ router.post("/", async (req, res) => {
     <p>Hello ${user.username},</p>
     <p>You have requested to reset your password. Click the button below to reset it:</p>
     <a href="${resetLink}">
-      <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      <button style="padding: 10px; background-color: #832729; color:#F8F7DA; border: none; border-radius: 5px; cursor: pointer;">
         Reset Your Password
       </button>
     </a>
   `;
 
-    await sendEmail(user.email, "Password Reset", htmlContent);
+    await sendEmail(user.email, "Gold Rate Calculator Application - Password Reset", htmlContent);
     res
       .status(200)
       .json({
